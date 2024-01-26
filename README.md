@@ -1,4 +1,6 @@
-## Foundry
+## Myosin Token (MYO)
+
+Built with Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
@@ -48,7 +50,10 @@ $ anvil
 ### Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+$ cp .env.example .env
+# Update .env appropriately
+$ source .env
+$ forge script script/Myosin.s.sol:MyosinDeploy --rpc-url $SEPOLIA_RPC_URL --broadcast --verify -vvvv
 ```
 
 ### Cast
